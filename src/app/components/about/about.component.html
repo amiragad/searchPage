@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="page_content">
+        <img class="logo_img" src="../../../assets/images/logo.png" />
+        <p class="info">
+            we show you best hotels around World
+        </p>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6 col-sm-12">
+            <h3 class="title"> Content Us</h3>
+            <form #form="ngForm" (submit)="onSubmit(form)">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Your Email</label>
+                    <input name="email" required [(ngModel)]="contact.email" #email="ngModel" type="email" class=" form-control" id="email" placeholder="name@example.com">
+                </div>
+                <div class="form-group invalid_message" *ngIf="email.invalid && email.touched">
+                    * invalid Email
+                </div>
+                <div class="form-group invalid_message" *ngIf="email.required && email.touched">
+                    * Email is required
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Your Message</label>
+                    <textarea name="message" required [(ngModel)]="contact.message" #message="ngModel" type="message" class=" form-control" id="message" rows="3"></textarea>
+                </div>
+                <div class="form-group invalid_message" *ngIf="message.required && message.touched">
+                    * message is required
+                </div>
+                <button class="btn btn-dark" type="submit"> Submit</button>
+            </form>
+
+        </div>
+        <div class="col-md-6 col-sm-12 mt-5">
+            <div class="w-75 m-auto">
+                <h3 class="title"> Dowenload App</h3>
+                <a href="https://www.google.com" class="links">
+                    <img class="img-fluid" style="background-color: transparent" src="../../../assets/images/google.png" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>

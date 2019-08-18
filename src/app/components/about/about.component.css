@@ -1,0 +1,35 @@
+.container {}
+
+.page_content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    color: #343a40;
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.invalid_message {
+    color: red;
+    font-size: 12px;
+}
+
+.info {
+    color: #545a5f;
+    text-align: center;
+}
+
+.logo_img {
+    margin: auto;
+    text-align: center;
+}
