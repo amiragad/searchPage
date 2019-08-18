@@ -35,6 +35,8 @@
                         | searchByPrice: priceFilter">
                             <p style="color:red">{{hotel.name}}</p>
                             <p style="color:green">{{hotel.price}} </p>
+                            <p style="color:black">{{hotel.city}} </p>
+
                             <div *ngFor="let availability of hotel.availability">
                                 <p style="color:blue">{{availability.from}} => {{availability.to}}</p>
                             </div>
@@ -45,6 +47,7 @@
                         | searchByPrice: priceFilter">
                             <p style="color:red">{{hotel.name}}</p>
                             <p style="color:green">{{hotel.price}}</p>
+                            <p style="color:black">{{hotel.city}} </p>
 
                             <div *ngFor="let availability of hotel.availability">
                                 <p style="color:blue">{{availability.from}} => {{availability.to}}</p>
