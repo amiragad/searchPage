@@ -1,3 +1,37 @@
 .slider_style {
     height: 100vh;
 }
+
+.postion_style {
+    position: absolute;
+    bottom: 50%;
+}
+
+.search-content {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.buttons {
+    text-align: right;
+}
+
+.date_content {
+    /* background-color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.623); */
+}
+
+.e-input-group:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left),
+.e-input-group.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap,
+.e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left),
+.e-input-group.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap,
+.e-float-input.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap,
+.e-float-input.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap {
+    background-color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}

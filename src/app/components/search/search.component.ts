@@ -42,7 +42,7 @@ filterOptions = [
   } 
 ]
 public start: Date = new Date ("10/10/2020"); 
-public end: Date = new Date ("12/10/2020");
+public end: Date = new Date ("10/10/2020");
   constructor( private hotelApi :HotelService ) { }
  
   ngOnInit() {
