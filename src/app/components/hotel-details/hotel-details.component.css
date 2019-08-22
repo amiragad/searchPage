@@ -7,3 +7,9 @@
     background-color: rgb(214, 208, 231);
     color: #343a40;
 }
+
+.days-body {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #08AB7C;
+}

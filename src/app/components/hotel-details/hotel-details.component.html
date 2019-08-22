@@ -4,14 +4,41 @@
         <div class="card mt-2 mb-5">
             <h5 class="card-header">{{hotel.name}}</h5>
             <div class="card-body">
-                <p>{{hotel.price}} $ </p>
-                <p>{{hotel.city}} </p>
                 <div class="row">
-                    <div class="col-4" *ngFor="let availability of hotel.availability">
-                        <p style="color:#fff">{{availability.from}} => {{availability.to}}</p>
+                    <div class="col-4">
+                        <p>price : </p>
+                    </div>
+                    <div class="col-6">
+                        <p>{{hotel.price}} $ </p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-4">
+                        <p>city : </p>
+                    </div>
+                    <div class="col-6">
+                        <p>{{hotel.city}} </p>
+                    </div>
+                </div>
+                <div *ngFor="let availability of hotel.availability">
+                    <div class="row  days-body">
+                        <div class="col-lg-3 col-sm-5">
+                            <p>from : </p>
+                        </div>
+                        <div class="col-lg-3  col-sm-7">
+                            <p style="color:#08AB7C">{{availability.from}} </p>
+                        </div>
+                        <div class="col-lg-3 col-sm-5">
+                            <p>to : </p>
+                        </div>
+                        <div class="col-lg-3 col-sm-7">
+                            <p style="color:#08AB7C">{{availability.to}} </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+            <!-- <p style="color:#08AB7C">{{availability.from}} => {{availability.to}}</p> -->
         </div>
     </div>
 </div>
