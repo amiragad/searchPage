@@ -9,24 +9,26 @@
                 <p> we show you best hotels</p>
 
                 <div class="search-content">
-                    <div class="buttons">
-                        <button class="btn btn-primary"> فنادق </button>
-                        <button class="btn btn-outline-primary"> طياران </button>
-                    </div>
+
                     <div class="row">
-                        <div class="col-md-6 col-sm-12">
+                        <div class="col-md-5 col-sm-10">
                             <div class="date_content">
                                 <h6> From</h6>
                                 <input type="date" (input)="setdays()" [(ngModel)]="start" class="form-control" />
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-12">
+                        <div class="col-md-5 col-sm-10">
                             <div class="date_content">
                                 <h6> to</h6>
                                 <input [(ngModel)]="end" (input)="setdays()" type="date" class="form-control" />
                             </div>
                         </div>
+                        <div class="col-md-2 col-sm-2">
+                            <h6> Days</h6>
+                            <input type="number" [(ngModel)]="days" class="form-control text-center" />
+                        </div>
                     </div>
+                    <button class="btn btn-primary mt-3" (click)="onSearch()">Search </button>
                 </div>
             </div>
         </div>

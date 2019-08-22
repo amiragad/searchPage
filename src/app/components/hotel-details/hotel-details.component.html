@@ -1,0 +1,17 @@
+<div class="container mt-5">
+    <div *ngFor="let hotel of hotels | orderBy:measure | searchByCity : cityFilter | searchByName: nameFilter
+                        | searchByPrice:priceFilter">
+        <div class="card mt-2 mb-5">
+            <h5 class="card-header">{{hotel.name}}</h5>
+            <div class="card-body">
+                <p>{{hotel.price}} $ </p>
+                <p>{{hotel.city}} </p>
+                <div class="row">
+                    <div class="col-4" *ngFor="let availability of hotel.availability">
+                        <p style="color:#fff">{{availability.from}} => {{availability.to}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

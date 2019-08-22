@@ -1,5 +1,5 @@
 body {
-    background-color: #C3083F !important;
+    background-color: rgb(165, 154, 196) !important;
 }
 
 .e-input-group.e-input-focus:not(.e-float-icon-left):not(.e-success):not(.e-warning):not(.e-error),

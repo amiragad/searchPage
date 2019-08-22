@@ -1,0 +1,9 @@
+.card-header {
+    background-color: #343a40;
+    color: rgb(165, 154, 196);
+}
+
+.card-body {
+    background-color: rgb(214, 208, 231);
+    color: #343a40;
+}

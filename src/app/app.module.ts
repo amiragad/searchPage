@@ -19,6 +19,7 @@ import { SearchByPriceFiltrationPipe } from './pipes/search-price-filtration.pip
 import { SearchByRangFiltrationPipe } from './pipes/search-rang-filtration.pipe';
 import { DateRangePickerModule } from '@syncfusion/ej2-angular-calendars';
 import { SearchByDaysFiltrationPipe } from './pipes/search-days-filtration.pipe';
+import { HotelDetailsComponent } from './components/hotel-details/hotel-details.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { SearchByDaysFiltrationPipe } from './pipes/search-days-filtration.pipe'
     HomeComponent,
     AboutComponent,
     SliderComponent,
+    HotelDetailsComponent,
     SearchByCityFiltrationPipe,
     SearchByNameFiltrationPipe,
     SearchByPriceFiltrationPipe,

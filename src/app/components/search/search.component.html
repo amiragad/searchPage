@@ -1,64 +1,22 @@
 <div class="container mt-5">
     <div class="row">
+
         <div class="col-lg-2 col-md-4 col-sm-6">
             <div class="col-12">
                 <select class="form-control" id="type" [(ngModel)]="measure" (change)="getMeasures()">
-                         <option *ngFor="let option of options" [ngValue]="option.measure">{{option.display}}</option>
-                        </select>
+                <option *ngFor="let option of options" [ngValue]="option.measure">{{option.display}}</option>
+                </select>
             </div>
             <div class="col-12">
                 <input [(ngModel)]="cityFilter" class="form-control mt-2" placeholder="Search by city" type="string" />
                 <input [(ngModel)]="nameFilter" class="form-control mt-2" placeholder="Search by name" type="string" />
                 <input [(ngModel)]="priceFilter" class="form-control mt-2" placeholder="Search by price" type="number" />
-                <ejs-daterangepicker placeholder='Select a range' [startDate]='start' [endDate]='end'></ejs-daterangepicker>
-                <input [(ngModel)]="days" class="form-control mt-2" placeholder="number of Days" />
             </div>
-
-
         </div>
+
         <div class="col-lg-10 col-md-8 col-sm-6">
-            <div class="row">
-                <div class="col-6">
-                    <div *ngIf="measure ==='all'">
-                        <div *ngFor="let hotel of hotels | searchByCity : cityFilter | searchByName: nameFilter
-                        | searchByPrice: priceFilter | searchByDays : days">
-                            <p style="color:red">{{hotel.name}}</p>
-                            <p style="color:green">{{hotel.price}} </p>
-                            <p style="color:black">{{hotel.city}} </p>
-                            <div *ngFor="let availability of hotel.availability">
-                                <p style="color:blue">{{availability.from}} => {{availability.to}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div *ngIf="measure ==='name'">
-                        <div *ngFor="let hotel of hotels | orderBy:'name' | searchByCity : cityFilter | searchByName: nameFilter
-                        | searchByPrice: priceFilter">
-                            <p style="color:red">{{hotel.name}}</p>
-                            <p style="color:green">{{hotel.price}} </p>
-                            <p style="color:black">{{hotel.city}} </p>
-
-                            <div *ngFor="let availability of hotel.availability">
-                                <p style="color:blue">{{availability.from}} => {{availability.to}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div *ngIf="measure ==='price'">
-                        <div *ngFor="let hotel of hotels | orderBy:'price' | searchByCity : cityFilter | searchByName: nameFilter
-                        | searchByPrice: priceFilter">
-                            <p style="color:red">{{hotel.name}}</p>
-                            <p style="color:green">{{hotel.price}}</p>
-                            <p style="color:black">{{hotel.city}} </p>
-
-                            <div *ngFor="let availability of hotel.availability">
-                                <p style="color:blue">{{availability.from}} => {{availability.to}}</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
+            <app-hotel-details [nameFilter]="nameFilter" [cityFilter]="cityFilter" [priceFilter]="priceFilter" [measure]="measure"></app-hotel-details>
         </div>
+
     </div>
 </div>
